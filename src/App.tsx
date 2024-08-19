@@ -16,7 +16,7 @@ const App = () => {
     setInputValue(e.target.value);
   };
 
-  const addNewTodo = () => {
+  const addNewTodo = (e) => {
     const newTodosValue = [
       ...todos,
       {
