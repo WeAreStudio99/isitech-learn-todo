@@ -2,6 +2,12 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Install dependencies
+
+```bash
+npm i
+```
+
 ## Running the app
 
 ```bash
@@ -23,4 +29,8 @@ npm run build
 ```bash
 # Lint
 npm run lint
+```
+
+```bash
+npm run format
 ```
