@@ -12,7 +12,7 @@ const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [todos, setTodos] = useState<Array<Todo>>([]);
 
-  const updateInputValue: ChangeEventHandler<HTMLInputElement> = (e) => {
+  const updateInputValue = (e) => {
     setInputValue(e.target.value);
   };
 
