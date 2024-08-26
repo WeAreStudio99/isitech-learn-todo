@@ -2,6 +2,7 @@ import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { Todo } from "./components/Todo";
 import { ChangeEventHandler, useState } from "react";
+import { getKey } from "./helpers";
 
 type Todo = {
   title: string;
@@ -55,7 +56,7 @@ const App = () => {
             onCheckboxChange={getTodoDoneToggler(index)}
             title={todo.title}
             done={todo.done}
-            key={`${todo.title}-${index}`}
+            key={getKey(todo.title, index)}
           />
         ))}
       </div>
