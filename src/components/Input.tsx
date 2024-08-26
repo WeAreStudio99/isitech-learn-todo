@@ -3,10 +3,11 @@ import { ChangeEventHandler, FC } from "react";
 type Props = {
   onChange: ChangeEventHandler<HTMLInputElement>;
   value: string;
+  placeholder: string;
 };
 
 export const Input: FC<Props> = (props) => {
-  const { onChange, value } = props;
+  const { onChange, value, placeholder } = props;
 
   return (
     <input
@@ -14,6 +15,7 @@ export const Input: FC<Props> = (props) => {
       type="text"
       onChange={onChange}
       value={value}
+      placeholder={placeholder}
     />
   );
 };

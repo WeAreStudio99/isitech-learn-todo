@@ -50,7 +50,7 @@ const App = () => {
   return (
     <main className="mx-auto flex max-w-screen-sm flex-col gap-5 p-5">
       <h1 className="text-2xl font-medium">Todo List</h1>
-      <div className="flex flex-col gap-3">
+      <div data-testid="list" className="flex flex-col gap-3">
         {todos.map((todo, index) => (
           <Todo
             onCheckboxChange={getTodoDoneToggler(index)}
@@ -61,7 +61,11 @@ const App = () => {
         ))}
       </div>
       <div className="flex items-center gap-3">
-        <Input onChange={updateInputValue} value={inputValue} />
+        <Input
+          placeholder="E.g. feed the cat"
+          onChange={updateInputValue}
+          value={inputValue}
+        />
         <Button onClick={addNewTodo}>Add a todo</Button>
       </div>
     </main>
