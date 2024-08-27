@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("Add item to ToDo", async ({ page }) => {
-  await page.goto("http://localhost:5174/");
+  await page.goto("http://localhost:4173");
 
   const btn = page.getByText("Add a todo");
   const list = page.getByTestId("list");
